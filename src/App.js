@@ -5,10 +5,10 @@ import topic1 from './pages/topic1';
 
 function App() {
   return (
-    <Router>
-      <Sidebar />
-      <Routes>
-        <Route path="/topic1" exact Component={topic1} />
+    <Router> {/* Envuelve toda la app y le da la funcionalidad de navegacion */}
+      <Sidebar /> {/* Llama al componente Sidebar */}
+      <Routes> {/* Declara las rutas de la app */}
+        <Route path="/topic1" exact Component={topic1} /> {/* Route declara las rutas individualmente */}
       </Routes>
     </Router>
   );

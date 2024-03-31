@@ -5,23 +5,17 @@ import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from 'react-icons/ai' 
 import { SidebarData } from './SidebarData'
 import SubMenu from './SubMenu'
-// import { IconContext } from 'react-icons'
 import { IconContext } from 'react-icons/lib'
 
-const Nav = styled.div`
-// backgrond: #15171c;
-// height: 80px;
-`;
+const Nav = styled.div``;
 
-const NavIcon = styled(Link)`
-// margin-left: 2rem;
-`
+const NavIcon = styled(Link)``
 
 const SidebarNav = styled.nav`
 left: ${({Sidebar}) => (Sidebar ? '0' : '-100%')}; 
 //Aqui se declara la posicion de la barra lateral, si esta activa se muestra, si no esta activa se esconde
 z-index: 10;
-transition: 450ms;
+transition: 800ms;
 `;
 const SidebarWrap = styled.div`
 bg-gray-100;
