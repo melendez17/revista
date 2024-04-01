@@ -7,24 +7,11 @@ import * as RiIcons from 'react-icons/ri' //Llamamos todos los icons de react-ic
 export const SidebarData = [
     //First Option
     {
-        title: 'Overview',
+        title: 'Tema 1',
         path: '/topic1',
         icon: <AiIcons.AiFillHome/>, //Llamamos el icono de react-icon, es solo la parte de la derecha lo que hay que cambiar, la parte de la izquierda depende si es tipo Ai, Fa, Io, Ri
         iconClosed: <RiIcons.RiArrowDownSFill/>,
         iconOpened: <RiIcons.RiArrowUpSFill/>,
-        subNav: [
-            {
-                title: 'Users',
-                path: '/overview/users',
-                icon: <IoIcons.IoIosPaper/>,
-            },
-            {
-                title: 'Revenue',
-                path: '/overview/revenue',
-                icon: <IoIcons.IoIosPaper/>,
-            },
-        ]
-
     },
     //Second Option
     {
@@ -56,6 +43,18 @@ export const SidebarData = [
     {
         title: 'Products',
         path: '/products',
-        icon: <FaIcons.FaCartPlus/>, 
+        icon: <FaIcons.FaCartPlus/>,
+        subNav: [
+            {
+                title: 'Users',
+                path: '/topic1',
+                icon: <IoIcons.IoIosPaper/>,
+            },
+            {
+                title: 'Revenue',
+                path: '/overview/revenue',
+                icon: <IoIcons.IoIosPaper/>,
+            },
+        ]
     },
 ]
