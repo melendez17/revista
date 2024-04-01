@@ -1,38 +1,18 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React from "react";
 import { Link } from "react-router-dom";
-import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
 import { SidebarData } from "./SidebarData";
-import SubMenu from "./SubMenu";
-import { IconContext } from "react-icons/lib";
 import "flowbite";
-import topic1 from "../pages/topic1";
-
-const Nav = styled.div``;
-
-const NavIcon = styled(Link)``;
-
-const SidebarNav = styled.nav`
-  left: ${({ Sidebar }) => (Sidebar ? "0" : "-100%")};
-  //Aqui se declara la posicion de la barra lateral, si esta activa se muestra, si no esta activa se esconde
-  z-index: 10;
-  transition: 800ms;
-`;
-const SidebarWrap = styled.div`
-bg-gray-100;
-`;
+import profilePicture from "../assets/Profilepicture2.jpg";
 
 const Sidebar = () => {
-  const [sidebar, setSidebar] = useState(); //Aqui se declara el estado de Sidebar, y el metodo para cambiarlo que va a ser setSidebar
-  const showSidebar = () => setSidebar(!sidebar); //Aqui se declara la funcion que va a cambiar el estado de Sidebar, que va a ser el contrario de lo que sea en ese momento
-
   return (
     <>
-      <nav class="fixed top-0 z-50 w-full bg-gray-900 border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+    {/* Navbar superior (Horizontal) */}
+      <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:border-gray-700">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center justify-start rtl:justify-end">
+          <div class="flex  items-center justify-between">
+            <div class="flex items-center justify-start">
+               {/* Boton que abre la sidebar */}
               <button
                 data-drawer-target="logo-sidebar"
                 data-drawer-toggle="logo-sidebar"
@@ -40,7 +20,7 @@ const Sidebar = () => {
                 type="button"
                 class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               >
-                <span class="sr-only">Open sidebar</span>
+               {/* icono de hamburguesa */}
                 <svg
                   class="w-6 h-6"
                   aria-hidden="true"
@@ -55,16 +35,66 @@ const Sidebar = () => {
                   ></path>
                 </svg>
               </button>
-              <a href="https://flowbite.com" class="flex ms-2 md:me-24">
-                <img
+              {/* <a href="https://flowbite.com" class="flex ms-2 md:me-24"> */}
+                {/* <img
                   src="https://flowbite.com/docs/images/logo.svg"
                   class="h-8 me-3"
                   alt="FlowBite Logo"
-                />
-                <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
-                  Flowbite
+                /> */}
+                <span class="self-center text-2xl font-bold sm:text-2xl ml-2 sm:ml-4 font-Titles whitespace-nowrap dark:text-white">
+                  Revista
                 </span>
-              </a>
+              {/* </a> */}
+            </div>
+            
+            {/* profile section  */}
+            <div class="flex items-center">
+              <div class="flex items-center">
+                <div>
+                  {/* boton con foto de perfil */}
+                  <button
+                    type="button"
+                    class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    aria-expanded="false"
+                    data-dropdown-toggle="dropdown-user"
+                  >
+                    <img
+                      class="w-8 h-8 rounded-full"
+                      src={profilePicture}
+                      alt="Melendez"
+                    />
+                  </button>
+                </div>
+                <div
+                  class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
+                  id="dropdown-user"
+                >
+                  <div class="px-4 py-3" role="none">
+                    <p
+                      class="text-sm text-gray-900 dark:text-white"
+                      role="none"
+                    >
+                      Andrés Meléndez
+                    </p>
+                    <p
+                      class="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
+                      role="none"
+                    >
+                      <a href="mailto:andresmelendezcar@gmail.com">andresmelendezcar@gmail.com</a>
+                    </p>
+                  </div>
+                  <ul class="py-1" role="none">
+                    <li>
+                    <Link
+                            to="/home"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            Home
+                          </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -75,7 +105,7 @@ const Sidebar = () => {
         class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
         aria-label="Sidebar"
       >
-        <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+        <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-00">
           <ul class="space-y-2 font-medium">
             {SidebarData.map((item, index) => (
               <li key={index}>
@@ -86,7 +116,7 @@ const Sidebar = () => {
                   data-collapse-toggle={`dropdown-example-${index}`}
                 >
                   {/* {item.icon} */}
-                  <span className="">{item.title}</span>
+                  <span className=" font-Titles font-semibold">{item.title}</span>
                   {item.subNav ? (
                     <svg
                       className="w-3 h-3 mr-3"
@@ -117,7 +147,7 @@ const Sidebar = () => {
                             to={subItem.path}
                             className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                           >
-                            {subItem.title}
+                            <span className="">{subItem.title}</span>
                           </Link>
                         </li>
                       ))}
@@ -128,108 +158,6 @@ const Sidebar = () => {
           </ul>
         </div>
       </aside>
-
-      {/* <div class="p-4 sm:ml-64">
-   <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
-      <div class="grid grid-cols-3 gap-4 mb-4">
-         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-      </div>
-      <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-         <p class="text-2xl text-gray-400 dark:text-gray-500">
-            <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-            </svg>
-         </p>
-      </div>
-      <div class="grid grid-cols-2 gap-4 mb-4">
-         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-      </div>
-      <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-         <p class="text-2xl text-gray-400 dark:text-gray-500">
-            <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-            </svg>
-         </p>
-      </div>
-      <div class="grid grid-cols-2 gap-4">
-         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-      </div>
-   </div>
-</div> */}
 
       <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     </>
