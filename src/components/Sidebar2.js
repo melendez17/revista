@@ -109,14 +109,16 @@ const Sidebar = () => {
           <ul class="space-y-2 font-medium">
             {SidebarData.map((item, index) => (
               <li key={index}>
-                <button
+                {/* Si quiero cambiar a que este menu funcione como link tambien debo cambiar button por link y descomentar el to= */}
+                <button 
                   type="button"
-                  className="flex px-4 items-center w-full p-2 justify-between text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                  // to={item.path}
+                  className="flex items-center justify-between w-full p-2 px-4 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                   aria-controls={`dropdown-example-${index}`}
                   data-collapse-toggle={`dropdown-example-${index}`}
                 >
                   {/* {item.icon} */}
-                  <span className=" font-Titles font-semibold">{item.title}</span>
+                  <span className="font-semibold font-Titles">{item.title}</span>
                   {item.subNav ? (
                     <svg
                       className="w-3 h-3 mr-3"
@@ -135,6 +137,7 @@ const Sidebar = () => {
                     </svg>
                   ) : null}
                 </button>
+                  {/* </Link> */}
                 {item.subNav ? (
                   <ul
                     id={`dropdown-example-${index}`}
