@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar2';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import topic1 from './pages/topic1';
 import operadoresConceptos from './pages/operadores/conceptos';
+import operadoresAsignacion from './pages/operadores/asignacion';
 // import home from './pages/home';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         {/* <Route path="/home" exact Component={home} /> Route declara las rutas individualmente */}
         <Route path="/topic1" exact Component={topic1} /> {/* Route declara las rutas individualmente */}
         <Route path="/operadores/conceptos" exact Component={operadoresConceptos} /> {/* Route declara las rutas individualmente */}
+        <Route path="/operadores/asignacion" exact Component={operadoresAsignacion} /> {/* Route declara las rutas individualmente */}
       </Routes>
     </Router>
   );

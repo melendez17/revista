@@ -20,7 +20,7 @@ export const SidebarData = [
             },
             {
                 title: 'Asignación',
-                path: '/reports/report2',
+                path: '/operadores/asignacion',
                 icon: <IoIcons.IoIosPaper/>,
             },
             {
