@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import topic1 from './pages/topic1';
 import operadoresConceptos from './pages/operadores/conceptos';
 import operadoresAsignacion from './pages/operadores/asignacion';
+import operadoresAritmeticos from './pages/operadores/aritmeticos';
 // import home from './pages/home';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/topic1" exact Component={topic1} /> {/* Route declara las rutas individualmente */}
         <Route path="/operadores/conceptos" exact Component={operadoresConceptos} /> {/* Route declara las rutas individualmente */}
         <Route path="/operadores/asignacion" exact Component={operadoresAsignacion} /> {/* Route declara las rutas individualmente */}
+        <Route path="/operadores/aritmeticos" exact Component={operadoresAritmeticos} /> {/* Route declara las rutas individualmente */}
       </Routes>
     </Router>
   );

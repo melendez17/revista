@@ -25,7 +25,7 @@ export const SidebarData = [
             },
             {
                 title: 'Aritméticos',
-                path: '/reports/report2',
+                path: '/operadores/aritmeticos',
                 icon: <IoIcons.IoIosPaper/>,
             },
             {
