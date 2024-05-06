@@ -30,17 +30,17 @@ export const SidebarData = [
             },
             {
                 title: 'Relacionales',
-                path: '/reports/report2',
+                path: '/operadores/relacionales',
                 icon: <IoIcons.IoIosPaper/>,
             },
             {
                 title: 'Lógicos',
-                path: '/reports/report2',
+                path: '/operadores/logicos',
                 icon: <IoIcons.IoIosPaper/>,
             },
             {
                 title: 'Combinación de Operadores',
-                path: '/reports/report2',
+                path: '/operadores/combinacion',
                 icon: <IoIcons.IoIosPaper/>,
             },
         ]
@@ -55,22 +55,22 @@ export const SidebarData = [
         subNav: [
             {
                 title: 'Conceptos Básicos',
-                path: '/reports/report1',
+                path: '/estructurasdecontrol/definicion',
                 icon: <IoIcons.IoIosPaper/>,
             },
             {
                 title: 'Secuenciales',
-                path: '/reports/report2',
+                path: '/estructurasdecontrol/secuenciales',
                 icon: <IoIcons.IoIosPaper/>,
             },
             {
                 title: 'Selectivas o Condicionales',
-                path: '/reports/report2',
+                path: 'estructurasdecontrol/condicionales',
                 icon: <IoIcons.IoIosPaper/>,
             },
             {
                 title: 'Repetitivas - Ciclos - Loops',
-                path: '/reports/report2',
+                path: '/estructurasdecontrol/repetitivas',
                 icon: <IoIcons.IoIosPaper/>,
             },
         ]
@@ -79,27 +79,22 @@ export const SidebarData = [
     //Third Option
     {
         title: 'Estructura de Datos',
-        path: '/products',
+        path: '/estructurasdedatos',
         icon: <FaIcons.FaCartPlus/>,
         subNav: [
             {
                 title: 'Conceptos Básicos',
-                path: '/topic1',
+                path: '/estructurasdedatos/conceptos',
                 icon: <IoIcons.IoIosPaper/>,
             },
             {
-                title: 'Vectores',
-                path: '/overview/revenue',
+                title: 'Estáticas',
+                path: '/estructurasdedatos/estaticas',
                 icon: <IoIcons.IoIosPaper/>,
             },
             {
-                title: 'Matrices',
-                path: '/overview/revenue',
-                icon: <IoIcons.IoIosPaper/>,
-            },
-            {
-                title: 'Registro',
-                path: '/overview/revenue',
+                title: 'Dinámicas',
+                path: '/estructurasdedatos/dinamicas',
                 icon: <IoIcons.IoIosPaper/>,
             },
         ]

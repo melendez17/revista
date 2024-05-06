@@ -2,6 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import img1 from '../../assets/operadores/conceptos/expresionmatematica.png'
 import img2 from '../../assets/operadores/conceptos/expresionlogica.png'
+import img3 from '../../assets/operadores/conceptos/condicionlogica.png'
+import img4 from '../../assets/operadores/conceptos/variable.png'
+import img5 from '../../assets/operadores/conceptos/algoritmo.png'
+import img6 from '../../assets/operadores/conceptos/pseudocodigo.png'
+import img7 from '../../assets/operadores/conceptos/diagramadeflujo.png'
+import img8 from '../../assets/operadores/conceptos/paradigma.jpg'
+import img9 from '../../assets/operadores/conceptos/paradigma2.webp'
 
 const Texto = styled.div`
 margin-top: 15px;
@@ -52,7 +59,46 @@ const conceptos = () => {
          <Texto>
             <b>Condición lógica</b> (if) es el uso técnico que se le puede dar a la expresión lógica como tal, y según donde se ubica cumple una función específica.
          </Texto>
+         <div class="w-full flex justify-center items-center">
+         <img src={img3} alt="Expresión Matemáticas" class=' my-5 h-52 rounded-lg'/>
+         </div>
         {/* </div> */}
+         <Texto>
+            <b>Variable:</b> Espacio en la memoria que tiene una dirección, un tipo, un valor y un nombre.
+         </Texto>
+         {/* <img1/> */}
+         <div class="w-full flex justify-center items-center">
+         <img src={img4} alt="Expresión Matemáticas" class=' my-5 h-52 rounded-lg'/>
+         </div>
+         <Texto>
+            <b>Algoritmo:</b> Es el conjunto de ordenes o pasos lógicos para poder llegar a un resultado o para poder realizar una tarea. Es definido, cuantas veces se realice da el mismo resultado. Es preciso, los pasos claros y lógicos.
+         </Texto>
+         {/* <img1/> */}
+         <div class="w-full flex justify-center items-center">
+         <img src={img5} alt="Expresión Matemáticas" class=' my-5 h-52 rounded-lg'/>
+         </div>
+         <Texto>
+            <b>Pseudocódigo:</b>  Es la especificación de un algoritmo en lenguaje natural.
+         </Texto>
+         {/* <img1/> */}
+         <div class="w-full flex justify-center items-center">
+         <img src={img6} alt="Expresión Matemáticas" class=' my-5 h-52 rounded-lg'/>
+         </div>
+         <Texto>
+            <b>Diagrama de flujo:</b> Representación gráfica de un pseudocódigo.
+         </Texto>
+         {/* <img1/> */}
+         <div class="w-full flex justify-center items-center">
+         <img src={img7} alt="Expresión Matemáticas" class=' my-5 h-52 rounded-lg'/>
+         </div>
+         <Texto>
+            <b>Paradigma:</b> Forma de ver o resolver las cosas.
+         </Texto>
+         {/* <img1/> */}
+         <div class="w-full flex justify-center items-center space-x-10">
+         <img src={img8} alt="Expresión Matemáticas" class=' my-5 h-52 rounded-lg'/>
+         <img src={img9} alt="Expresión Matemáticas" class=' my-5 h-52 rounded-lg'/>
+         </div>
     </div>
         </div>
     </div>
