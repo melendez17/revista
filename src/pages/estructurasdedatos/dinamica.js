@@ -133,19 +133,6 @@ const conceptos = () => {
                 class=" my-5 h-52 rounded-lg"
               />
             </div>
-            <Subtitles>
-                Cola
-            </Subtitles>
-            <Texto>   
-            a cola es otro tipo especial de lista lineal dentro de las estructuras de datos dinámicas, pero a diferencia de una pila que sigue el principio LIFO (Last In, First Out), una cola sigue el principio FIFO (First In, First Out), es decir, el primer elemento en entrar es el primero en salir.
-            </Texto>
-            <div class="w-full flex justify-center items-center">
-              <img
-                src={img3}
-                alt="Expresión Matemáticas"
-                class=" my-5 h-52 rounded-lg"
-              />
-            </div>
             </div>
             </div>
             </div>
