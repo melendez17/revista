@@ -73,6 +73,11 @@ export const SidebarData = [
                 path: '/estructurasdecontrol/repetitivas',
                 icon: <IoIcons.IoIosPaper/>,
             },
+            {
+                title: 'Subprocesos',
+                path: '/estructurasdecontrol/subprocesos',
+                icon: <IoIcons.IoIosPaper/>,
+            },
         ]
 
     },
@@ -95,6 +100,23 @@ export const SidebarData = [
             {
                 title: 'Dinámicas',
                 path: '/estructurasdedatos/dinamicas',
+                icon: <IoIcons.IoIosPaper/>,
+            },
+        ]
+    },
+    {
+        title: 'Bases de Datos',
+        path: '/basesdedatos',
+        icon: <FaIcons.FaCartPlus/>,
+        subNav: [
+            {
+                title: 'Conceptos Básicos',
+                path: '/basesdedatos/conceptos',
+                icon: <IoIcons.IoIosPaper/>,
+            },
+            {
+                title: 'Normalización',
+                path: '/basesdedatos/normalizacion',
                 icon: <IoIcons.IoIosPaper/>,
             },
         ]

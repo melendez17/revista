@@ -28,7 +28,7 @@ const conceptos = () => {
     <div class="p-4 xl:flex justify-center items-center sm:ml-72 max-h-max xl:mr-10 overflow-y-auto my-20">
       {/* <div class=" font-Titles text-2xl font-semibold mb-4 text-gray-900"> */}
       <div class="xl:w-3/4">
-        <Titles>Operadores Lógicos</Titles>
+        <Titles>Operadores Lógicos o Booleanos</Titles>
         {/* </div> */}
         <div>
           {/* <div class="font-Titles text-md font-medium grid grid-cols-3 text-gray-900"> */}

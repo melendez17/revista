@@ -13,9 +13,12 @@ import estructurasDefinicion from './pages/estructurasdecontrol/definicion';
 import estructurasSecuenciales from './pages/estructurasdecontrol/secuenciales';
 import estructurasCondicionales from './pages/estructurasdecontrol/condicionales';
 import estructurasRepetitivas from './pages/estructurasdecontrol/repetitivas';
+import estructurasSubprocesos from './pages/estructurasdecontrol/subprocesos';
 import estructurasConceptos from './pages/estructurasdedatos/conceptos';
 import estructurasDinamica from './pages/estructurasdedatos/dinamica';
 import estructurasEstaticas from './pages/estructurasdedatos/estaticas';
+import basesConceptos from './pages/basesdedatos/conceptos';
+import basesNormalizacion from './pages/basesdedatos/normalizacion';
 // import home from './pages/home';
 
 function App() {
@@ -35,9 +38,12 @@ function App() {
         <Route path="/estructurasdecontrol/secuenciales" exact Component={estructurasSecuenciales} /> {/* Route declara las rutas individualmente */}
         <Route path="/estructurasdecontrol/condicionales" exact Component={estructurasCondicionales} /> {/* Route declara las rutas individualmente */}
         <Route path="/estructurasdecontrol/repetitivas" exact Component={estructurasRepetitivas} />
+        <Route path="/estructurasdecontrol/subprocesos" exact Component={estructurasSubprocesos} />
         <Route path="/estructurasdedatos/conceptos" exact Component={estructurasConceptos} />
         <Route path="/estructurasdedatos/dinamicas" exact Component={estructurasDinamica} />
         <Route path="/estructurasdedatos/estaticas" exact Component={estructurasEstaticas} />
+        <Route path="/basesdedatos/conceptos" exact Component={basesConceptos} />
+        <Route path="/basesdedatos/normalizacion" exact Component={basesNormalizacion} />
       </Routes>
     </Router>
   );

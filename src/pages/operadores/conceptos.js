@@ -64,14 +64,28 @@ const conceptos = () => {
          </div>
         {/* </div> */}
          <Texto>
-            <b>Variable:</b> Espacio en la memoria que tiene una dirección, un tipo, un valor y un nombre.
+            <b>Variable:</b> Espacio en la memoria que tiene una dirección, un tipo, un valor y un nombre. El nombre debe cumplir con ciertas reglas:
+            <div class="ml-6 space-y-4">
+            <li>
+            Sin tildes
+            </li>
+            <li>No puede empezar con un número</li>
+            <li>Sin carácteres especiales (solo utilizar el guión bajo)</li>
+               </div>
          </Texto>
          {/* <img1/> */}
          <div class="w-full flex justify-center items-center">
          <img src={img4} alt="Expresión Matemáticas" class=' my-5 h-52 rounded-lg'/>
          </div>
          <Texto>
-            <b>Algoritmo:</b> Es el conjunto de ordenes o pasos lógicos para poder llegar a un resultado o para poder realizar una tarea. Es definido, cuantas veces se realice da el mismo resultado. Es preciso, los pasos claros y lógicos.
+            <b>Algoritmo:</b> Es el conjunto de ordenes o pasos lógicos para poder llegar a un resultado o para poder realizar una tarea. Es definido, cuantas veces se realice da el mismo resultado. Es preciso, los pasos claros y lógicos. Características:
+            <div class="ml-6 space-y-4">
+            <li>
+            <b>Finito:</b> Tiene un fin.
+            </li>
+            <li><b>Definido:</b> Debe dar el mismo resultado al recibir la misma entrada, por ejemplo, siempre va a devolver lo mismo, si comenzó devolviendo un queque, siempre va a devolver un queque.</li>
+            <li><b>Precisos:</b> Las instrucciones lógicas son claras y concisas, sin ambiguedad.</li>
+               </div>
          </Texto>
          {/* <img1/> */}
          <div class="w-full flex justify-center items-center">
