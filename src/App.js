@@ -19,6 +19,11 @@ import estructurasDinamica from './pages/estructurasdedatos/dinamica';
 import estructurasEstaticas from './pages/estructurasdedatos/estaticas';
 import basesConceptos from './pages/basesdedatos/conceptos';
 import basesNormalizacion from './pages/basesdedatos/normalizacion';
+import energia from './pages/tecnologiasdeinformacion/energia';
+import tecnologiaDigital from './pages/tecnologiasdeinformacion/tecnologiadigital';
+import macrotecnologia from './pages/tecnologiasdeinformacion/macrotecnologia';
+import optimizacionEnergia from './pages/tecnologiasdeinformacion/optimizacionenergia';
+import conceptosBasicos from './pages/tecnologiasdeinformacion/conceptosbasicos';
 // import home from './pages/home';
 
 function App() {
@@ -44,6 +49,11 @@ function App() {
         <Route path="/estructurasdedatos/estaticas" exact Component={estructurasEstaticas} />
         <Route path="/basesdedatos/conceptos" exact Component={basesConceptos} />
         <Route path="/basesdedatos/normalizacion" exact Component={basesNormalizacion} />
+        <Route path="/ti/energia" exact Component={energia} />
+        <Route path="/ti/tecnologiadigital" exact Component={tecnologiaDigital} />
+        <Route path="/ti/macrotecnologia" exact Component={macrotecnologia} />
+        <Route path="/ti/optimizacionenergia" exact Component={optimizacionEnergia} />
+        <Route path="/ti/conceptosbasicos" exact Component={conceptosBasicos} />
       </Routes>
     </Router>
   );

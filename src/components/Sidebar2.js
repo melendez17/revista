@@ -130,6 +130,9 @@ const Sidebar = () => {
                     {item.subNav.map((subItem, subIndex) => (
                       // Secondary data
                       <li key={subIndex}>
+                        <Link
+                          to={subItem.path}
+                          >
                         <button
                           type="button"
                           className="flex items-center justify-between w-full p-2 px-4 text-sm text-left text-gray-900 transition duration-75 rounded-lg pl-7 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
@@ -137,6 +140,7 @@ const Sidebar = () => {
                           data-collapse-toggle={`dropdown-example-${index}-${subIndex}`}
                         >
                           <span className="font-medium font-Titles">{subItem.title}</span>
+                          
                           {subItem.subNav ? (
                             <svg
                               className="w-2 h-3 mr-3"
@@ -155,6 +159,7 @@ const Sidebar = () => {
                             </svg>
                           ) : null}
                         </button>
+                        </Link>
                         {subItem.subNav ? (
                           <ul
                             id={`dropdown-example-${index}-${subIndex}`}

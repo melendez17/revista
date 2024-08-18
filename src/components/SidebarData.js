@@ -59,7 +59,6 @@ export const SidebarData = [
     
     {
         title: 'Operadores',
-        path: '/topic1',
         icon: <AiIcons.AiFillHome/>, //Llamamos el icono de react-icon, es solo la parte de la derecha lo que hay que cambiar, la parte de la izquierda depende si es tipo Ai, Fa, Io, Ri
         iconClosed: <RiIcons.RiArrowDownSFill/>,
         iconOpened: <RiIcons.RiArrowUpSFill/>,
@@ -99,7 +98,6 @@ export const SidebarData = [
     //Second Option
     {
         title: 'Estructura de Control',
-        path: '/reports',
         icon: <AiIcons.AiFillHome/>, //Llamamos el icono de react-icon, es solo la parte de la derecha lo que hay que cambiar, la parte de la izquierda depende si es tipo Ai, Fa, Io, Ri
         iconClosed: <RiIcons.RiArrowDownSFill/>,
         iconOpened: <RiIcons.RiArrowUpSFill/>,
@@ -135,7 +133,6 @@ export const SidebarData = [
     //Third Option
     {
         title: 'Estructura de Datos',
-        path: '/estructurasdedatos',
         icon: <FaIcons.FaCartPlus/>,
         subNav: [
             {
@@ -158,7 +155,6 @@ export const SidebarData = [
     //Fourth Option
     {
         title: 'Bases de Datos',
-        path: '/basesdedatos',
         icon: <FaIcons.FaCartPlus/>,
         subNav: [
             {
