@@ -5,7 +5,58 @@ import * as IoIcons from 'react-icons/io' //Llamamos todos los icons de react-ic
 import * as RiIcons from 'react-icons/ri' //Llamamos todos los icons de react-icon, en vez de llamar uno por uno
 
 export const SidebarData = [
-    //First Option
+    //Tecnologías de la información
+    {
+        title: 'Tecnologías de la información',
+            path: '/topic1',
+            icon: <AiIcons.AiFillHome/>, //Llamamos el icono de react-icon, es solo la parte de la derecha lo que hay que cambiar, la parte de la izquierda depende si es tipo Ai, Fa, Io, Ri
+            iconClosed: <RiIcons.RiArrowDownSFill/>,
+            iconOpened: <RiIcons.RiArrowUpSFill/>,
+            subNav: [
+                {
+                    title: 'Energía',
+                    path: '/ti/energia',
+                    icon: <IoIcons.IoIosPaper/>,
+                },
+                {
+                    title: 'Tecnología Digital',
+                    path: '/ti/tecnologiaDigital',
+                    icon: <IoIcons.IoIosPaper/>,
+                },
+                {
+                    title: 'Macrotecnología',
+                    path: '/ti/macrotecnologia',
+                    icon: <IoIcons.IoIosPaper/>,
+                },
+                {
+                    title: 'Optimización de Energía',
+                    path: '/ti/optimizacionEnergia',
+                    icon: <IoIcons.IoIosPaper/>,
+                },
+                {
+                    title: 'Conceptos Básicos',
+                    path: '/ti/conceptosBasicos',
+                    icon: <IoIcons.IoIosPaper/>,
+                },
+            ]
+    },
+    //Emprendimiento e innovación
+    {
+        title: 'Emprendimiento e innovación',
+            path: '/topic1',
+            icon: <AiIcons.AiFillHome/>, //Llamamos el icono de react-icon, es solo la parte de la derecha lo que hay que cambiar, la parte de la izquierda depende si es tipo Ai, Fa, Io, Ri
+            iconClosed: <RiIcons.RiArrowDownSFill/>,
+            iconOpened: <RiIcons.RiArrowUpSFill/>,
+    }, 
+    //Programación para web
+    {
+        title: 'Programación para web',
+        path: '/topic1',
+        icon: <AiIcons.AiFillHome/>, //Llamamos el icono de react-icon, es solo la parte de la derecha lo que hay que cambiar, la parte de la izquierda depende si es tipo Ai, Fa, Io, Ri
+        iconClosed: <RiIcons.RiArrowDownSFill/>,
+        iconOpened: <RiIcons.RiArrowUpSFill/>,
+        subNav: [   
+    
     {
         title: 'Operadores',
         path: '/topic1',
@@ -104,6 +155,7 @@ export const SidebarData = [
             },
         ]
     },
+    //Fourth Option
     {
         title: 'Bases de Datos',
         path: '/basesdedatos',
@@ -121,4 +173,22 @@ export const SidebarData = [
             },
         ]
     },
+        ]
+},
+    //Diseño de Software
+{
+    title: 'Diseño de Software',
+        path: '/topic1',
+        icon: <AiIcons.AiFillHome/>, //Llamamos el icono de react-icon, es solo la parte de la derecha lo que hay que cambiar, la parte de la izquierda depende si es tipo Ai, Fa, Io, Ri
+        iconClosed: <RiIcons.RiArrowDownSFill/>,
+        iconOpened: <RiIcons.RiArrowUpSFill/>,
+}, 
+//Soporte TI
+{
+    title: 'Soporte TI',
+        path: '/topic1',
+        icon: <AiIcons.AiFillHome/>, //Llamamos el icono de react-icon, es solo la parte de la derecha lo que hay que cambiar, la parte de la izquierda depende si es tipo Ai, Fa, Io, Ri
+        iconClosed: <RiIcons.RiArrowDownSFill/>,
+        iconOpened: <RiIcons.RiArrowUpSFill/>,
+}, 
 ]
